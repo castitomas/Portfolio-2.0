@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    background-color: #292929;
+}
+
+/*NAVBAR*/
+nav
+{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    left: 0;
+    width: 319px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+nav a
+{
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Lato, sans-serif;;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+}
+
+nav a:before, nav a:after
+{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+
+nav a:before
+{
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+}
+
+nav a:after
+{
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px
+}
+
+nav a:nth-child(1):before
+{
+    background-color: yellow;
+}
+
+nav a:nth-child(1):after
+{
+    background-color: red;
+}
+
+nav a:nth-child(2):before
+{
+    background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after
+{
+    background-color: #89ff00;
+}
+
+nav a:nth-child(3):before
+{
+    background-color: purple;
+}
+
+nav a:nth-child(3):after
+{
+    background-color: palevioletred;
+}
+
+#indicator
+{
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+nav a:hover
+{
+    color: #fff;
+}
+
+nav a:hover:before, nav a:hover:after
+{
+    transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator
+{
+    background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator
+{
+    left: 34%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator
+{
+    left: 70%;
+    background: linear-gradient(130deg, purple, palevioletred);
+}
+
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  z-index: 125;
+}
+
+/* PROJECTS */
+
+.wrapper {
+    height: 100%;
+    margin-top: 30%;
+}
+
+.wrapper h1{
+    text-align: center;
+    font-family: Lato, sans-serif;
+    color: white;
+}
+
+.project {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.project-details {
+    font-family: 'Roboto Mono', sans-serif;
+    color:rgba(255, 255, 255, 0.589);
+}
+
+.project-details a {
+    padding: 0 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #198f15;
+}
+
+.project-details a:hover {
+    color:#136910;
+}
+
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+@media (min-width:641px){
+    .wrapper {
+        margin-top: 20%;
+    }
+
+    .wrapper h1 {
+        font-size: 25px;
+    }
+
+    .project {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width:801px){
+    .wrapper h1 {
+        font-size: 30px;
+    }
+    
+}
+
+@media (min-width:1025px) {
+    .wrapper {
+        margin-top: 10%;
+    }
+
+    .wrapper h1 {
+        font-size: 40px;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .project img {
+        height: 400px;
+    }
+    
+    .project-details {
+        padding-top: 80px;
+        padding-left: 20px;
+    }
+
+    .project-details h2 {
+        font-size: 30px;
+    }
+
+
+}
+
+
+  
